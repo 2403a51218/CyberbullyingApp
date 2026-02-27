@@ -1,3 +1,6 @@
+import nltk
+nltk.download('stopwords')
+nltk.download('punkt')
 import streamlit as st
 import pandas as pd
 import re
@@ -70,4 +73,5 @@ if st.button("Run Full Pipeline"):
             st.write(f"**Vocabulary Size:** {len(vectorizer.vocabulary_)}")
             st.write("**Model Type:** Logistic Regression + TF-IDF")
     else:
+
         st.warning("Please enter text first.")
